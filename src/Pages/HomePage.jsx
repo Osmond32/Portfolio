@@ -18,10 +18,10 @@ const HomePage = () => {
         
         {/* --- COLONNA SINISTRA: Testi --- */}
         <div className="flex-1 flex flex-col items-start w-full">
-          <p className="text-primary font-mono mb-4 text-2xl md:text-3xl font-semibold tracking-wide flex items-baseline gap-x-2 md:gap-x-3">
+          <p className="text-primary font-mono mb-4 text-2xl md:text-3xl font-semibold tracking-wide flex flex-col md:flex-row items-start md:items-baseline gap-y-1 md:gap-x-3">
             <span className="whitespace-nowrap">{t('home.greeting')}</span>
 
-            {/* La Firma! Ora perfettamente in linea */}
+            {/* La Firma! A capo su mobile, in linea su desktop */}
             <span className="font-signature text-white text-5xl md:text-6xl tracking-normal whitespace-nowrap">
               Giuseppe Saia
             </span>
@@ -69,8 +69,8 @@ const HomePage = () => {
             
           </div>
 
-          {/* --- Lingue Parlate (Forzate sulla stessa riga) --- */}
-          <div className="mt-6 flex flex-nowrap items-center gap-4 sm:gap-6 whitespace-nowrap overflow-x-auto pb-2 sm:pb-0">
+          {/* --- Lingue Parlate (con wrapping per mobile) --- */}
+          <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
              <div className="flex items-center gap-2">
                <div className="w-1 h-3 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)] shrink-0"></div>
                <span className="text-gray-200 font-medium tracking-wide">
