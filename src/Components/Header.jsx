@@ -1,5 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+// Importiamo il file del CV per poterlo scaricare
+import cvFile from '../assets/CV_Giuseppe_Saia.pdf';
 
 const Header = () => {
   
@@ -16,9 +18,14 @@ const Header = () => {
   // Funzione chiamata al completamento del bottone
   const handleCvClick = () => {
     if (isCvPage) {
-      // L'utente è già nel CV: facciamo partire il download!
-      // Mostra l'alert tradotto
-      alert(t('header.alertCV'));
+      // L'utente è già nel CV: creiamo un link temporaneo per forzare il download
+      const link = document.createElement('a');
+      link.href = cvFile;
+      // Il nome che il file avrà una volta scaricato
+      link.setAttribute('download', 'CV_Giuseppe_Saia.pdf'); 
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     } else {
       // L'utente è altrove: lo mandiamo alla pagina del CV
       navigate('/cv');
@@ -47,30 +54,33 @@ const Header = () => {
             onClick={() => i18n.changeLanguage('it')}
             className={`transition-all duration-300 cursor-pointer flex items-center justify-center ${i18n.language === 'it' ? 'scale-125 drop-shadow-md z-10' : 'opacity-80 hover:opacity-100 hover:scale-110'}`}
             title="Italiano"
+            aria-label="Cambia lingua in Italiano"
           >
-            <img src="https://flagcdn.com/w40/it.png" alt="Italia" className="w-6 h-auto rounded-[2px]" />
+            <img src="https://flagcdn.com/w40/it.png" alt="Italia" width="24" height="15" className="w-6 h-auto rounded-[2px]" />
           </button>
           
-          <div className="w-[1px] h-6 bg-gray-300"></div>
+          <div className="w-[1px] h-6 bg-gray-400"></div>
 
           {/* Bandiera Inglese */}
           <button 
             onClick={() => i18n.changeLanguage('en')}
             className={`transition-all duration-300 cursor-pointer flex items-center justify-center ${i18n.language === 'en' ? 'scale-125 drop-shadow-md z-10' : 'opacity-80 hover:opacity-100 hover:scale-110'}`}
             title="English"
+            aria-label="Change language to English"
           >
-            <img src="https://flagcdn.com/w40/gb.png" alt="English" className="w-6 h-auto rounded-[2px]" />
+            <img src="https://flagcdn.com/w40/gb.png" alt="English" width="24" height="15" className="w-6 h-auto rounded-[2px]" />
           </button>
-
-          <div className="w-[1px] h-6 bg-gray-300"></div>
+          
+          <div className="w-[1px] h-6 bg-gray-400"></div>
 
           {/* Bandiera Francese */}
           <button 
             onClick={() => i18n.changeLanguage('fr')}
             className={`transition-all duration-300 cursor-pointer flex items-center justify-center ${i18n.language === 'fr' ? 'scale-125 drop-shadow-md z-10' : 'opacity-80 hover:opacity-100 hover:scale-110'}`}
             title="Français"
+            aria-label="Changer la langue in Français"
           >
-            <img src="https://flagcdn.com/w40/fr.png" alt="Français" className="w-6 h-auto rounded-[2px]" />
+            <img src="https://flagcdn.com/w40/fr.png" alt="Français" width="24" height="15" className="w-6 h-auto rounded-[2px]" />
           </button>
 
         </div>

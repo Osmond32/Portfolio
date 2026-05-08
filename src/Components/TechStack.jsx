@@ -37,7 +37,7 @@ const TechStack = () => {
             key={`${tech.name}-${index}`} 
             className="flex items-center gap-4 bg-dark/80 px-6 py-3 rounded-full border border-gray-800 hover:border-primary/50 hover:-translate-y-1 transition-all duration-300 shadow-sm cursor-pointer"
           >
-            <img src={tech.icon} alt={tech.name} className="w-8 h-8 object-contain" />
+            <img src={tech.icon} alt={tech.name} width="32" height="32" loading="lazy" className="w-8 h-8 object-contain" />
             <span className="text-gray-300 font-semibold text-base tracking-wide">
               {tech.name}
             </span>

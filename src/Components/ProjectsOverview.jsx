@@ -74,13 +74,13 @@ const ProjectsOverview = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-16">
         <StatCard title={t('projects_overview.stats.projects')} value={4} />
         <StatCard title={t('projects_overview.stats.experience')} value={8} />
-        <StatCard title={t('projects_overview.stats.techs')} value={10} suffix="+" />
+        <StatCard title={t('projects_overview.stats.techs')} value={18} suffix="+" />
       </div>
 
       {/* Pulsante che dirotta alla pagina dei progetti */}
       <Link 
         to="/projects" 
-        className="group relative inline-flex items-center justify-center px-10 py-4 font-bold text-white transition-all duration-300 bg-red-500/10 border border-red-500 rounded-xl overflow-hidden hover:bg-red-500 hover:text-white shadow-[0_0_15px_rgba(239,68,68,0.2)] hover:shadow-[0_0_30px_rgba(239,68,68,0.6)] animate-pulse hover:animate-none"
+        className="group relative inline-flex items-center justify-center px-10 py-4 font-bold text-white transition-all duration-300 bg-red-500/10 border border-red-500 rounded-xl overflow-hidden hover:bg-red-500 hover:text-white shadow-[0_0_15px_rgba(239,68,68,0.2)] hover:shadow-[0_0_30px_rgba(239,68,68,0.6)]"
       >
         <span className="relative z-10 flex items-center gap-3 text-lg">
           {t('projects_overview.button')}

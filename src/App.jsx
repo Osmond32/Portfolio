@@ -5,6 +5,7 @@ import HomePage from './Pages/HomePage';
 import Footer from './Components/Footer';
 import ProjectsPage from './Pages/ProjectsPage';
 import ContactPage from './Pages/ContactPage';
+import CvPage from './Pages/CvPage';
 import ScrollToTop from './Components/ScrollToTop';
 
 // Importiamo la configurazione delle lingue!
@@ -19,14 +20,13 @@ function App() {
         <Sidebar />
         <Header />
         
-        {/* Il main assorbe lo spazio lasciato dalla Sidebar fissa (w-64 = 16rem o 256px) */}
+        {/* Il main assorbe lo spazio lasciato dalla Sidebar fissa */}
         <main className="w-full relative min-h-screen">
           <Routes>
             <Route path="/" element={<HomePage />} />
-            {/* Pagine Placeholders per farti vedere come naviga la Sidebar */}
-            
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/cv" element={<CvPage />} />
           </Routes>
           <Footer />
         </main>

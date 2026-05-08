@@ -101,6 +101,8 @@ const AboutSection = () => {
             <img
               src={mangaFoto}
               alt={t('about.image_alt')}
+              width="448"
+              height="448"
               loading="lazy"
               className="relative z-10 w-full h-auto object-cover rounded-2xl border border-gray-800 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
             />

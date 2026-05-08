@@ -14,9 +14,16 @@ module.exports = {
       },
       // --- QUESTE SONO LE ANIMAZIONI DA AGGIUNGERE ---
       animation: {
-        'marquee': 'marquee 60s linear infinite', // Velocità della striscia (aumenta i secondi per rallentare)
-        'floating': 'floating 6s ease-in-out infinite', // Animazione foto fluttuante
-        'shine': 'shine 13s linear infinite', // Animazione scintillio
+        'marquee': 'marquee 60s linear infinite',
+        'floating': 'floating 6s ease-in-out infinite',
+        'shine': 'shine 13s linear infinite',
+        'fadeInUp': 'fadeInUp 0.7s ease-out both',
+        'fadeInUp-d1': 'fadeInUp 0.7s ease-out 0.15s both',
+        'fadeInUp-d2': 'fadeInUp 0.7s ease-out 0.30s both',
+        'fadeInUp-d3': 'fadeInUp 0.7s ease-out 0.45s both',
+        'fadeInUp-d4': 'fadeInUp 0.7s ease-out 0.60s both',
+        'fadeInUp-d5': 'fadeInUp 0.7s ease-out 0.75s both',
+        'fadeIn': 'fadeIn 0.8s ease-out 0.9s both',
       },
       keyframes: {
         marquee: {
@@ -30,7 +37,15 @@ module.exports = {
         shine: {
           '0%': { backgroundPosition: '200% center' },
           '100%': { backgroundPosition: '-200% center' },
-        }
+        },
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(30px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
       }
       // ---------------------------------------------
     },
