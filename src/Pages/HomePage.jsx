@@ -59,16 +59,16 @@ const HomePage = () => {
               </span>
             </div>
 
-            {/* Pulsante CTA Email */}
-            <a 
-              href="mailto:saia.giuseppe@live.it"
+            {/* Pulsante CTA verso Pagina Contatti */}
+            <Link 
+              to="/contact"
               className="flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 border border-primary/30 text-primary font-medium hover:bg-primary hover:text-dark hover:shadow-[0_0_15px_rgba(0,229,255,0.4)] transition-all duration-300 group"
             >
               <svg className="w-5 h-5 text-white group-hover:text-dark group-hover:scale-110 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
               </svg>
               <span>{t('home.cta_hero')}</span>
-            </a>
+            </Link>
             
             {/* Pulsante Telefono */}
             <a 
@@ -194,15 +194,15 @@ const HomePage = () => {
           {t('contact_page.description')}
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <a
-            href="mailto:saia.giuseppe@live.it"
+          <Link
+            to="/contact"
             className="flex items-center gap-3 px-8 py-4 rounded-xl bg-primary text-dark font-bold text-lg hover:bg-[#00c8e6] shadow-[0_0_20px_rgba(0,229,255,0.4)] hover:shadow-[0_0_35px_rgba(0,229,255,0.6)] transition-all duration-300 group"
           >
             <svg className="w-5 h-5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
             </svg>
-            saia.giuseppe@live.it
-          </a>
+            {t('home.cta_hero')}
+          </Link>
           <Link
             to="/projects"
             className="flex items-center gap-3 px-8 py-4 rounded-xl bg-transparent text-primary font-bold text-lg border border-primary/50 hover:bg-primary/10 hover:border-primary transition-all duration-300"

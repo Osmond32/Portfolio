@@ -77,7 +77,8 @@ const resources = {
           email_placeholder: "La tua email",
           message_label: "Messaggio",
           message_placeholder: "Come posso aiutarti?",
-          send_button: "Invia Messaggio"
+          send_button: "Invia Messaggio",
+          gdpr_note: "Inviando questo modulo, acconsenti al trattamento dei tuoi dati personali esclusivamente per rispondere alla tua richiesta, in conformità con il GDPR."
         }
       },
       sidebar: {
@@ -187,7 +188,8 @@ const resources = {
           email_placeholder: "Your email address",
           message_label: "Message",
           message_placeholder: "How can I help you?",
-          send_button: "Send Message"
+          send_button: "Send Message",
+          gdpr_note: "By submitting this form, you consent to the processing of your personal data exclusively to respond to your request, in compliance with GDPR."
         }
       },
       sidebar: {
@@ -297,7 +299,8 @@ const resources = {
           email_placeholder: "Votre adresse e-mail",
           message_label: "Message",
           message_placeholder: "Comment puis-je vous aider ?",
-          send_button: "Envoyer le Message"
+          send_button: "Envoyer le Message",
+          gdpr_note: "En envoyant ce formulaire, vous consentez au traitement di vos données personnelles exclusivement pour répondre à votre demande, conformément au RGPD."
         }
       },
       sidebar: {

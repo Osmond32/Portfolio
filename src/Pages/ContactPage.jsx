@@ -200,6 +200,11 @@ const ContactPage = () => {
               {status === 'error'   && '❌ Errore — riprova'}
             </button>
 
+            {/* Nota GDPR */}
+            <p className="text-[10px] text-gray-500 leading-tight text-center px-4 italic">
+              {t('contact_page.form.gdpr_note')}
+            </p>
+
             {/* Banner successo */}
             {status === 'success' && (
               <div className="relative z-10 flex items-start gap-3 p-4 bg-green-500/10 border border-green-500/30 rounded-xl text-green-400 text-sm">
