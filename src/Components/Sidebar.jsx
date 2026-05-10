@@ -17,37 +17,38 @@ const Sidebar = () => {
       )}
 
       {/* Bottone Hamburger */}
-      <div className="fixed top-5 left-5 z-50 group cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
-        <div className="absolute inset-0 bg-primary/20 rounded-lg blur-xl group-hover:bg-primary/40 transition-colors duration-300"></div>
-        <button 
-          aria-label="Apri o Chiudi Menu di Navigazione"
-          className="relative text-white flex flex-col gap-1.5 p-2.5 bg-dark-surface rounded-lg border-2 border-primary shadow-[0_0_30px_rgba(0,229,255,0.3)] transition-all duration-300 pointer-events-none"
+      <div className="fixed top-5 left-5 z-50 flex items-center gap-4">
+        {/* Bottone Menu */}
+        <div className="group cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+          <div className="absolute inset-0 bg-primary/20 rounded-lg blur-xl group-hover:bg-primary/40 transition-colors duration-300"></div>
+          <button 
+            aria-label="Apri o Chiudi Menu di Navigazione"
+            className="relative text-white flex flex-col gap-1.5 p-2.5 bg-dark-surface rounded-lg border-2 border-primary shadow-[0_0_30px_rgba(0,229,255,0.3)] transition-all duration-300 pointer-events-none"
+          >
+            <span className={`block w-6 h-0.5 bg-current transition-transform duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`block w-6 h-0.5 bg-current transition-opacity duration-300 ${isOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`block w-6 h-0.5 bg-current transition-transform duration-300 ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          </button>
+        </div>
+
+        {/* Avatar Home Sempre Visibile */}
+        <NavLink 
+          to="/" 
+          onClick={() => setIsOpen(false)}
+          className="relative group flex items-center justify-center"
         >
-          <span className={`block w-6 h-0.5 bg-current transition-transform duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-          <span className={`block w-6 h-0.5 bg-current transition-opacity duration-300 ${isOpen ? 'opacity-0' : ''}`}></span>
-          <span className={`block w-6 h-0.5 bg-current transition-transform duration-300 ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
-        </button>
+          <div className="absolute -inset-1.5 bg-primary/40 rounded-full blur opacity-40 group-hover:opacity-100 transition duration-300"></div>
+          <div className="relative w-12 h-12 bg-dark-surface border-2 border-primary rounded-full flex items-center justify-center text-primary group-hover:scale-105 transition-transform duration-300 shadow-[0_0_15px_rgba(0,229,255,0.3)]">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </div>
+        </NavLink>
       </div>
 
       {/* Pannello Sidebar */}
       <aside className={`fixed left-0 top-0 h-full w-64 bg-dark-surface border-r border-gray-800 flex flex-col pt-24 px-6 pb-6 text-light z-40 transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
         
-        {/* Avatar Home */}
-        <div className="mb-8 px-2 flex justify-start">
-          <NavLink 
-            to="/" 
-            onClick={() => setIsOpen(false)}
-            className="relative group"
-          >
-            <div className="absolute -inset-1.5 bg-primary/40 rounded-full blur opacity-40 group-hover:opacity-100 transition duration-300"></div>
-            <div className="relative w-14 h-14 bg-dark-surface border-2 border-primary rounded-full flex items-center justify-center text-primary group-hover:scale-105 transition-transform duration-300 shadow-[0_0_15px_rgba(0,229,255,0.3)]">
-              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-              </svg>
-            </div>
-          </NavLink>
-        </div>
-
         <div className="mb-10 px-2">
           <h2 className="text-3xl font-bold font-sans text-primary">Portfolio.</h2>
         </div>
