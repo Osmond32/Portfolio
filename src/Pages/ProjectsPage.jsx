@@ -22,16 +22,16 @@ const projectsData = [
   {
     id: "nomadehub",
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop",
-    tech: ["React", "Node.js", "Express", "MySQL", "Mantine"],
+    tech: ["React", "Node.js", "MySQL", "Render", "Aiven"],
     link: "https://nomad-hub-bz8x.vercel.app/",
     isComingSoon: false
   },
   {
     id: "users",
     image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=800&auto=format&fit=crop",
-    tech: ["React", "Node.js", "JWT", "Bcrypt", "MySQL"],
-    link: "#",
-    isComingSoon: true
+    tech: ["React", "Node.js", "MySQL", "Render", "Aiven"],
+    link: "https://project-user-alpha.vercel.app",
+    isComingSoon: false
   }
 ];
 
