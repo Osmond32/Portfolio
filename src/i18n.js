@@ -92,8 +92,13 @@ const resources = {
         description: "Ecco una selezione di progetti realizzati durante la mia formazione. Ogni card rappresenta una sfida affrontata, nuove tecnologie apprese e soluzioni implementate per trasformare idee in codice funzionante.",
         view_project: "Vedi Progetto",
         coming_soon: "Presto disponibile",
+        in_production: "In produzione",
         back_to_home: "Torna alla Home",
         projects: {
+          magic_shop: {
+            title: "Magic Shop",
+            description: "Negozio online di carte Magic: The Gathering. Integrazione doppia API: Shopify per la gestione e-commerce e Scryfall per il database delle carte."
+          },
           allocine: {
             title: "AlloCiné Clone",
             description: "Una piattaforma web per la ricerca di film e serie TV. Gestione dei preferiti, ricerca dinamica e paginazione integrando l'API pubblica di TMDB."
@@ -203,8 +208,13 @@ const resources = {
         description: "Here is a selection of projects carried out during my training. Each card represents a challenge faced, new technologies learned, and solutions implemented to turn ideas into functional code.",
         view_project: "View Project",
         coming_soon: "Coming soon",
+        in_production: "In production",
         back_to_home: "Back to Home",
         projects: {
+          magic_shop: {
+            title: "Magic Shop",
+            description: "Magic: The Gathering online store. Dual API integration: Shopify for e-commerce management and Scryfall for the card database."
+          },
           allocine: {
             title: "AlloCiné Clone",
             description: "A web platform for searching movies and TV series. Favorites management, dynamic search, and pagination integrating the public TMDB API."
@@ -314,8 +324,13 @@ const resources = {
         description: "Voici une sélection de projets réalisés lors de ma formation. Chaque carte représente un défi relevé, de nouvelles technologies apprises et des solutions mises en œuvre pour transformer des idées en code fonctionnel.",
         view_project: "Voir le Projet",
         coming_soon: "Bientôt disponible",
+        in_production: "In production",
         back_to_home: "Retour à l'Accueil",
         projects: {
+          magic_shop: {
+            title: "Magic Shop",
+            description: "Boutique en ligne Magic: The Gathering. Double intégration API : Shopify pour la gestion e-commerce et Scryfall pour la base de données des cartes."
+          },
           allocine: {
             title: "Clone d'AlloCiné",
             description: "Une plateforme web pour la recherche de films et de séries TV. Gestion des favoris, recherche dynamique et pagination intégrant l'API publique de TMDB."

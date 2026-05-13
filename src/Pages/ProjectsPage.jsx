@@ -5,6 +5,13 @@ import { Link } from 'react-router-dom';
 // Qui puoi inserire o modificare i dati dei tuoi veri progetti
 const projectsData = [
   {
+    id: "magic_shop",
+    image: "/projects/magic_shop.png",
+    tech: ["React", "Shopify API", "Scryfall API"],
+    link: "#",
+    inProduction: true
+  },
+  {
     id: "allocine",
     image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=800&auto=format&fit=crop",
     tech: ["React", "Bootstrap", "Axios", "API REST"],
@@ -71,7 +78,7 @@ const ProjectsPage = () => {
             className={`group flex flex-col bg-[#0b1120]/80 backdrop-blur-xl border border-gray-700 shadow-lg shadow-black/40 rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-3 relative ${project.isComingSoon ? 'cursor-not-allowed hover:border-gray-500 hover:shadow-none' : 'cursor-pointer hover:shadow-[0_15px_40px_-10px_rgba(0,229,255,0.2)] hover:border-primary/50'}`}
           >
             {/* Bagliore (Glow) di sfondo che appare all'hover */}
-            {!project.isComingSoon && <div className="absolute -inset-4 opacity-0 group-hover:opacity-20 transition-all duration-700 blur-[30px] bg-primary pointer-events-none"></div>}
+            {(!project.isComingSoon && !project.inProduction) && <div className="absolute -inset-4 opacity-0 group-hover:opacity-20 transition-all duration-700 blur-[30px] bg-primary pointer-events-none"></div>}
 
             {/* Immagine del Progetto */}
             <div className={`relative h-48 w-full overflow-hidden border-b border-gray-700 ${project.isComingSoon ? 'grayscale opacity-60' : ''}`}>
@@ -96,6 +103,10 @@ const ProjectsPage = () => {
                 <span className="text-sm text-yellow-500 font-medium mb-4 inline-block">
                   ({t('projects_page.coming_soon')})
                 </span>
+              ) : project.inProduction ? (
+                <span className="text-sm text-green-400 font-medium mb-4 inline-block">
+                  ({t('projects_page.in_production')})
+                </span>
               ) : (
                 <div className="mb-4"></div>
               )}
@@ -109,7 +120,7 @@ const ProjectsPage = () => {
                 {project.tech.map((tech, index) => (
                   <span 
                     key={index} 
-                    className={`px-2.5 py-1 text-[11px] font-mono font-semibold rounded-md shadow-sm ${project.isComingSoon ? 'text-gray-400 bg-gray-800/50 border border-gray-700/50' : 'text-primary bg-primary/10 border border-primary/20'}`}
+                    className={`px-2.5 py-1 text-[11px] font-mono font-semibold rounded-md shadow-sm ${(project.isComingSoon || project.inProduction) ? 'text-gray-400 bg-gray-800/50 border border-gray-700/50' : 'text-primary bg-primary/10 border border-primary/20'}`}
                   >
                     {tech}
                   </span>
@@ -118,8 +129,8 @@ const ProjectsPage = () => {
 
               {/* Pulsante Unico per il Progetto */}
               <div className="mt-auto pt-4 border-t border-gray-700/50">
-                <span className={`block w-full text-center py-3 text-sm font-bold rounded-lg transition-all ${project.isComingSoon ? 'text-gray-400 bg-gray-800' : 'text-dark bg-primary group-hover:bg-[#00c8e6] shadow-[0_0_15px_rgba(0,229,255,0.3)] group-hover:shadow-[0_0_25px_rgba(0,229,255,0.5)]'}`}>
-                  {project.isComingSoon ? t('projects_page.coming_soon') : t('projects_page.view_project')}
+                <span className={`block w-full text-center py-3 text-sm font-bold rounded-lg transition-all ${(project.isComingSoon || project.inProduction) ? 'text-gray-400 bg-gray-800' : 'text-dark bg-primary group-hover:bg-[#00c8e6] shadow-[0_0_15px_rgba(0,229,255,0.3)] group-hover:shadow-[0_0_25px_rgba(0,229,255,0.5)]'}`}>
+                  {project.isComingSoon ? t('projects_page.coming_soon') : project.inProduction ? t('projects_page.in_production') : t('projects_page.view_project')}
                 </span>
               </div>
             </div>
