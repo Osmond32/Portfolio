@@ -12,13 +12,13 @@ const CvPage = () => {
       {/* --- Intestazione della Pagina --- */}
       <div className="mb-12 text-center md:text-left">
         <h3 className="font-signature text-5xl text-transparent bg-clip-text bg-gradient-to-r from-primary via-white to-green-400 animate-shine mb-2 drop-shadow-[0_0_15px_rgba(0,229,255,0.3)] pb-1 pr-2 w-fit mx-auto md:mx-0">
-          Curriculum Vitae
+          {t('cv_page.title_sm')}
         </h3>
         <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight mt-4">
-          Il mio Percorso
+          {t('cv_page.title')}
         </h1>
         <p className="text-gray-400 max-w-3xl text-lg mt-6 leading-relaxed mx-auto md:mx-0">
-          Qui puoi visualizzare il mio CV completo. Se desideri salvarne una copia, puoi utilizzare il pulsante "Scarica CV" che trovi in alto a destra nella barra di navigazione.
+          {t('cv_page.description')}
         </p>
       </div>
 
@@ -26,7 +26,7 @@ const CvPage = () => {
       <div className="w-full h-[80vh] bg-dark-surface rounded-lg border border-gray-800 shadow-2xl overflow-hidden">
         <iframe
           src={cvFile}
-          title="CV di Giuseppe Saia"
+          title={t('cv_page.iframe_title')}
           width="100%"
           height="100%"
           className="border-none"

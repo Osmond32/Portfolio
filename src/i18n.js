@@ -116,6 +116,12 @@ const resources = {
             description: "Sistema di autenticazione backend e frontend con registrazione, login sicuro, criptografia password (Bcrypt) e gestione dei token (JWT)."
           }
         }
+      },
+      cv_page: {
+        title_sm: "Curriculum Vitae",
+        title: "Il mio Percorso",
+        description: "Qui puoi visualizzare il mio CV completo. Se desideri salvarne una copia, puoi utilizzare il pulsante \"Scarica CV\" che trovi in alto a destra nella barra di navigazione.",
+        iframe_title: "CV di Giuseppe Saia"
       }
     }
   },
@@ -232,6 +238,12 @@ const resources = {
             description: "Backend and frontend authentication system with registration, secure login, password encryption (Bcrypt), and token management (JWT)."
           }
         }
+      },
+      cv_page: {
+        title_sm: "Curriculum Vitae",
+        title: "My Journey",
+        description: "Here you can view my complete CV. If you wish to save a copy, you can use the \"Download CV\" button located in the top right navigation bar.",
+        iframe_title: "Giuseppe Saia's CV"
       }
     }
   },
@@ -348,6 +360,12 @@ const resources = {
             description: "Système d'authentification backend et frontend avec inscription, connexion sécurisée, cryptage de mots de passe (Bcrypt) et gestion des jetons (JWT)."
           }
         }
+      },
+      cv_page: {
+        title_sm: "Curriculum Vitae",
+        title: "Mon Parcours",
+        description: "Ici vous pouvez consulter mon CV complet. Se vous souhaitez en enregistrer une copie, vous pouvez utiliser le bouton \"Télécharger CV\" situé dans la barre de navigation en haut à droite.",
+        iframe_title: "CV de Giuseppe Saia"
       }
     }
   }
