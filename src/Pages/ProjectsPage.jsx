@@ -8,8 +8,9 @@ const projectsData = [
     id: "magic_shop",
     image: "/projects/magic_shop.png",
     tech: ["React", "Shopify API", "Scryfall API"],
-    link: "#",
-    inProduction: true
+    link: "https://osmond32.github.io/ShopMTG/",
+    inProduction: false,
+    isComingSoon: false
   },
   {
     id: "allocine",
