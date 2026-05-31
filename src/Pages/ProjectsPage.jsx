@@ -5,6 +5,14 @@ import { Link } from 'react-router-dom';
 // Qui puoi inserire o modificare i dati dei tuoi veri progetti
 const projectsData = [
   {
+    id: "devcard",
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop",
+    tech: ["React", "Tailwind CSS", "Node.js", "Express", "GitHub API"],
+    link: "https://cardev-5ivx.vercel.app",
+    inProduction: false,
+    isComingSoon: false
+  },
+  {
     id: "magic_shop",
     image: "/projects/magic_shop.png",
     tech: ["React", "Shopify API", "Scryfall API"],

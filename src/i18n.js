@@ -95,6 +95,10 @@ const resources = {
         in_production: "In produzione",
         back_to_home: "Torna alla Home",
         projects: {
+          devcard: {
+            title: "DevCard",
+            description: "Trasforma il tuo profilo GitHub in una carta collezionabile FUT/FIFA in tempo reale! Analizza le statistiche, scopri la tua rarità con animazioni 3D e scarica la carta in HD."
+          },
           magic_shop: {
             title: "Magic Shop",
             description: "Negozio online di carte Magic: The Gathering. Integrazione doppia API: Shopify per la gestione e-commerce e Scryfall per il database delle carte."
@@ -217,6 +221,10 @@ const resources = {
         in_production: "In production",
         back_to_home: "Back to Home",
         projects: {
+          devcard: {
+            title: "DevCard",
+            description: "Transform your GitHub profile into a real-time FUT/FIFA-style collectible card! Analyze stats, discover your rarity tier with 3D animations, and download your card in HD."
+          },
           magic_shop: {
             title: "Magic Shop",
             description: "Magic: The Gathering online store. Dual API integration: Shopify for e-commerce management and Scryfall for the card database."
@@ -339,6 +347,10 @@ const resources = {
         in_production: "In production",
         back_to_home: "Retour à l'Accueil",
         projects: {
+          devcard: {
+            title: "DevCard",
+            description: "Transformez votre profil GitHub en carte de collection style FUT/FIFA en temps réel ! Analysez vos statistiques, découvrez votre rareté avec des animations 3D et téléchargez votre carte en HD."
+          },
           magic_shop: {
             title: "Magic Shop",
             description: "Boutique en ligne Magic: The Gathering. Double intégration API : Shopify pour la gestion e-commerce et Scryfall pour la base de données des cartes."
