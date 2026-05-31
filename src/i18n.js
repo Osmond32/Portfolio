@@ -94,6 +94,12 @@ const resources = {
         coming_soon: "Presto disponibile",
         in_production: "In produzione",
         back_to_home: "Torna alla Home",
+        cold_start_modal: {
+          title: "Avvio del Server in Corso...",
+          description: "Questo progetto utilizza un piano gratuito su Render/Vercel. Se il server non è stato usato di recente, potrebbe richiedere circa 50 secondi per riattivarsi dal cold start. Grazie per la pazienza!",
+          confirm: "Procedi al Progetto",
+          cancel: "Annulla"
+        },
         projects: {
           devcard: {
             title: "Dev DevCard",
@@ -220,6 +226,12 @@ const resources = {
         coming_soon: "Coming soon",
         in_production: "In production",
         back_to_home: "Back to Home",
+        cold_start_modal: {
+          title: "Server Spin-up in Progress...",
+          description: "This project is hosted on free-tier services (Render/Vercel). If it hasn't been accessed recently, the server may take up to 50 seconds to spin up from a cold start. Thank you for your patience!",
+          confirm: "Proceed to Project",
+          cancel: "Cancel"
+        },
         projects: {
           devcard: {
             title: "Dev DevCard",
@@ -346,6 +358,12 @@ const resources = {
         coming_soon: "Bientôt disponible",
         in_production: "In production",
         back_to_home: "Retour à l'Accueil",
+        cold_start_modal: {
+          title: "Démarrage du Serveur...",
+          description: "Ce projet est hébergé sur des services gratuits (Render/Vercel). S'il n'a pas été accédé récemment, le serveur peut mettre jusqu'à 50 secondes à démarrer (cold start). Merci pour votre patience !",
+          confirm: "Accéder au Projet",
+          cancel: "Annuler"
+        },
         projects: {
           devcard: {
             title: "Dev DevCard",

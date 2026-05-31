@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
@@ -10,7 +10,8 @@ const projectsData = [
     tech: ["React", "Tailwind CSS", "Node.js", "Express", "GitHub API"],
     link: "https://cardev-5ivx.vercel.app",
     inProduction: false,
-    isComingSoon: false
+    isComingSoon: false,
+    hasColdStart: true
   },
   {
     id: "magic_shop",
@@ -40,19 +41,23 @@ const projectsData = [
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop",
     tech: ["React", "Node.js", "MySQL", "Render", "Aiven"],
     link: "https://nomad-hub-bz8x.vercel.app/",
-    isComingSoon: false
+    isComingSoon: false,
+    hasColdStart: true
   },
   {
     id: "users",
     image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=800&auto=format&fit=crop",
     tech: ["React", "Node.js", "MySQL", "Render", "Aiven"],
     link: "https://project-user-alpha.vercel.app",
-    isComingSoon: false
+    isComingSoon: false,
+    hasColdStart: true
   }
 ];
 
 const ProjectsPage = () => {
   const { t } = useTranslation();
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <div className="pt-32 px-8 max-w-6xl mx-auto min-h-[calc(100vh-80px)] text-light pb-24">
@@ -84,6 +89,14 @@ const ProjectsPage = () => {
             target={project.isComingSoon ? undefined : "_blank"}
             rel={project.isComingSoon ? undefined : "noopener noreferrer"}
             key={project.id} 
+            onClick={(e) => {
+              if (project.isComingSoon) return;
+              if (project.hasColdStart) {
+                e.preventDefault();
+                setSelectedProject(project);
+                setShowModal(true);
+              }
+            }}
             className={`group flex flex-col bg-[#0b1120]/80 backdrop-blur-xl border border-gray-700 shadow-lg shadow-black/40 rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-3 relative ${project.isComingSoon ? 'cursor-not-allowed hover:border-gray-500 hover:shadow-none' : 'cursor-pointer hover:shadow-[0_15px_40px_-10px_rgba(0,229,255,0.2)] hover:border-primary/50'}`}
           >
             {/* Bagliore (Glow) di sfondo che appare all'hover */}
@@ -146,6 +159,64 @@ const ProjectsPage = () => {
           </a>
         ))}
       </div>
+
+      {/* Modal per Cold Start dei Server */}
+      {showModal && selectedProject && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          {/* Backdrop con sfocatura sfumata */}
+          <div 
+            className="absolute inset-0 bg-black/70 backdrop-blur-sm cursor-pointer"
+            onClick={() => setShowModal(false)}
+          ></div>
+          
+          {/* Contenuto del Modal */}
+          <div className="relative z-10 bg-[#0f172a]/95 border border-gray-800 rounded-2xl max-w-md w-full p-8 shadow-2xl shadow-primary/10 animate-in fade-in zoom-in duration-300">
+            {/* Pulsante di chiusura ad incrocio */}
+            <button 
+              className="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors"
+              onClick={() => setShowModal(false)}
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            {/* Icona di Avviso Animata */}
+            <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-yellow-500/10 text-yellow-500 border border-yellow-500/20 mb-6 shadow-[0_0_15px_rgba(234,179,8,0.15)]">
+              <svg className="w-8 h-8 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+
+            {/* Titolo e Descrizione */}
+            <h3 className="text-2xl font-bold text-white text-center mb-4">
+              {t('projects_page.cold_start_modal.title')}
+            </h3>
+            <p className="text-gray-400 text-sm leading-relaxed text-justify mb-8">
+              {t('projects_page.cold_start_modal.description')}
+            </p>
+
+            {/* Azioni */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button 
+                className="flex-1 py-3 text-center text-sm font-bold rounded-lg text-dark bg-primary hover:bg-[#00c8e6] shadow-[0_0_15px_rgba(0,229,255,0.3)] hover:shadow-[0_0_25px_rgba(0,229,255,0.5)] transition-all cursor-pointer"
+                onClick={() => {
+                  window.open(selectedProject.link, '_blank', 'noopener,noreferrer');
+                  setShowModal(false);
+                }}
+              >
+                {t('projects_page.cold_start_modal.confirm')}
+              </button>
+              <button 
+                className="flex-1 py-3 text-center text-sm font-bold rounded-lg text-gray-400 bg-gray-800 hover:bg-gray-700 hover:text-white border border-gray-700/50 transition-all cursor-pointer"
+                onClick={() => setShowModal(false)}
+              >
+                {t('projects_page.cold_start_modal.cancel')}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
