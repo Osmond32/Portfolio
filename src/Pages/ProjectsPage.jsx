@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const projectsData = [
   {
     id: "devcard",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop",
+    image: "/projects/dev_devcard.png",
     tech: ["React", "Tailwind CSS", "Node.js", "Express", "GitHub API"],
     link: "https://cardev-5ivx.vercel.app",
     inProduction: false,
