@@ -72,7 +72,7 @@ const ProjectsOverview = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-16">
-        <StatCard title={t('projects_overview.stats.projects')} value={5} />
+        <StatCard title={t('projects_overview.stats.projects')} value={6} />
         <StatCard title={t('projects_overview.stats.experience')} value={9} />
         <StatCard title={t('projects_overview.stats.techs')} value={18} suffix="+" />
       </div>
