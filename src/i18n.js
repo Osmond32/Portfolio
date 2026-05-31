@@ -96,8 +96,8 @@ const resources = {
         back_to_home: "Torna alla Home",
         projects: {
           devcard: {
-            title: "DevCard",
-            description: "Trasforma il tuo profilo GitHub in una carta collezionabile FUT/FIFA in tempo reale! Analizza le statistiche, scopri la tua rarità con animazioni 3D e scarica la carta in HD."
+            title: "Dev DevCard",
+            description: "Trasforma il tuo profilo GitHub in una carta collezionabile FUT/FIFA in tempo reale! Analizza le statistiche, scopri la tua rarità con animazioni 3D e condividi la tua carta."
           },
           magic_shop: {
             title: "Magic Shop",
@@ -222,8 +222,8 @@ const resources = {
         back_to_home: "Back to Home",
         projects: {
           devcard: {
-            title: "DevCard",
-            description: "Transform your GitHub profile into a real-time FUT/FIFA-style collectible card! Analyze stats, discover your rarity tier with 3D animations, and download your card in HD."
+            title: "Dev DevCard",
+            description: "Transform your GitHub profile into a real-time FUT/FIFA-style collectible card! Analyze stats, discover your rarity tier with 3D animations, and share your card."
           },
           magic_shop: {
             title: "Magic Shop",
@@ -348,8 +348,8 @@ const resources = {
         back_to_home: "Retour à l'Accueil",
         projects: {
           devcard: {
-            title: "DevCard",
-            description: "Transformez votre profil GitHub en carte de collection style FUT/FIFA en temps réel ! Analysez vos statistiques, découvrez votre rareté avec des animations 3D et téléchargez votre carte en HD."
+            title: "Dev DevCard",
+            description: "Transformez votre profil GitHub en carte de collection style FUT/FIFA en temps réel ! Analysez vos statistiques, découvrez votre rareté avec des animations 3D et partagez votre carte."
           },
           magic_shop: {
             title: "Magic Shop",
