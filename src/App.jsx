@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import ReactGA from 'react-ga4';
-import Sidebar from './Components/Sidebar';
-import Header from './Components/Header';
+import Navbar from './Components/Navbar';
 import HomePage from './Pages/HomePage';
 import Footer from './Components/Footer';
 import ProjectsPage from './Pages/ProjectsPage';
@@ -40,8 +39,7 @@ function App() {
       <AnalyticsTracker />
       {/* Sfondo principale dell'app */}
       <div className="min-h-screen bg-dark w-full font-sans selection:bg-primary/30 selection:text-primary">
-        <Sidebar />
-        <Header />
+        <Navbar />
         
         {/* Il main assorbe lo spazio lasciato dalla Sidebar fissa */}
         <main className="w-full relative min-h-screen">
