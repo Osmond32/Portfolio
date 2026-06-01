@@ -1,5 +1,5 @@
 import React from 'react';
-import mangaFoto from '../assets/cooking_code.png';
+import mangaFoto from '../assets/about_mind_code.png';
 import { useTranslation } from 'react-i18next';
 
 const AboutSection = () => {
