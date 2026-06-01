@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import { useLocation, useNavigate, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import cvFile from '../assets/CV_Giuseppe_Saia.pdf';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const { t, i18n } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
@@ -10,6 +12,7 @@ const Navbar = () => {
   const isCvPage = location.pathname === '/cv';
 
   const handleCvClick = () => {
+    setIsOpen(false);
     if (isCvPage) {
       const link = document.createElement('a');
       link.href = cvFile;
@@ -27,14 +30,15 @@ const Navbar = () => {
       {/* ======================================================== */}
       {/* 1. TOP HEADER (Sempre visibile in alto su tutti i dispositivi) */}
       {/* ======================================================== */}
-      <header className="fixed top-0 left-0 w-full h-16 sm:h-20 bg-dark/80 backdrop-blur-md border-b border-gray-800/50 flex items-center justify-between px-4 sm:px-6 md:px-12 z-40">
+      <header className="fixed top-0 left-0 w-full h-16 sm:h-20 bg-dark/80 backdrop-blur-md border-b border-gray-800/50 flex items-center justify-between px-6 md:px-12 z-50">
         
         {/* LOGO SINISTRA */}
         <NavLink 
           to="/" 
-          className="relative group flex items-center gap-1.5 sm:gap-2"
+          onClick={() => setIsOpen(false)}
+          className="relative group flex items-center gap-2 z-50"
         >
-          <span className="font-signature text-xl sm:text-2xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-primary via-white to-green-400 bg-[length:200%_auto] animate-shine drop-shadow-[0_0_10px_rgba(0,229,255,0.2)]">
+          <span className="font-signature text-2xl sm:text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-primary via-white to-green-400 bg-[length:200%_auto] animate-shine drop-shadow-[0_0_10px_rgba(0,229,255,0.2)]">
             Giuseppe Saia
           </span>
         </NavLink>
@@ -81,11 +85,11 @@ const Navbar = () => {
           </NavLink>
         </nav>
 
-        {/* 3. AZIONI DESTRA (Flags + CV Button) */}
-        <div className="flex items-center gap-2 sm:gap-3 md:gap-6">
+        {/* 3. AZIONI DESTRA (Flags + CV Button) - Visibili solo su Desktop/Tablet */}
+        <div className="hidden md:flex items-center gap-3 md:gap-6">
           
           {/* Bandierine Selezione Lingua (Compatte e Premium) */}
-          <div className="flex items-center gap-1 sm:gap-1.5 md:gap-3 bg-white/5 border border-gray-800/80 p-0.5 sm:p-1 md:p-1.5 px-1.5 sm:px-2 md:px-3.5 rounded-full shadow-inner shrink-0">
+          <div className="flex items-center gap-1.5 md:gap-3 bg-white/5 border border-gray-800/80 p-1 md:p-1.5 px-2 md:px-3.5 rounded-full shadow-inner shrink-0">
             {/* Bandiera Italiana */}
             <button 
               onClick={() => i18n.changeLanguage('it')}
@@ -95,10 +99,10 @@ const Navbar = () => {
               title="Italiano"
               aria-label="Italiano"
             >
-              <img src="https://flagcdn.com/w40/it.png" alt="IT" className="w-[18px] h-[12px] sm:w-[20px] sm:h-[14px] md:w-6 md:h-4 object-cover rounded-[2px]" />
+              <img src="https://flagcdn.com/w40/it.png" alt="IT" className="w-5 h-3.5 md:w-6 md:h-4 object-cover rounded-[2px]" />
             </button>
             
-            <div className="w-[1px] h-3 sm:h-3.5 bg-gray-700/80"></div>
+            <div className="w-[1px] h-3.5 bg-gray-700/80"></div>
 
             {/* Bandiera Inglese */}
             <button 
@@ -109,10 +113,10 @@ const Navbar = () => {
               title="English"
               aria-label="English"
             >
-              <img src="https://flagcdn.com/w40/gb.png" alt="EN" className="w-[18px] h-[12px] sm:w-[20px] sm:h-[14px] md:w-6 md:h-4 object-cover rounded-[2px]" />
+              <img src="https://flagcdn.com/w40/gb.png" alt="EN" className="w-5 h-3.5 md:w-6 md:h-4 object-cover rounded-[2px]" />
             </button>
             
-            <div className="w-[1px] h-3 sm:h-3.5 bg-gray-700/80"></div>
+            <div className="w-[1px] h-3.5 bg-gray-700/80"></div>
 
             {/* Bandiera Francese */}
             <button 
@@ -123,73 +127,126 @@ const Navbar = () => {
               title="Français"
               aria-label="Français"
             >
-              <img src="https://flagcdn.com/w40/fr.png" alt="FR" className="w-[18px] h-[12px] sm:w-[20px] sm:h-[14px] md:w-6 md:h-4 object-cover rounded-[2px]" />
+              <img src="https://flagcdn.com/w40/fr.png" alt="FR" className="w-5 h-3.5 md:w-6 md:h-4 object-cover rounded-[2px]" />
             </button>
           </div>
 
           {/* Pulsante CV */}
           <button 
             onClick={handleCvClick}
-            className="bg-primary/10 text-primary border border-primary px-2.5 py-1 sm:px-3.5 sm:py-1.5 md:px-5 md:py-2 text-[10px] sm:text-xs md:text-sm whitespace-nowrap rounded-full font-semibold hover:bg-primary hover:text-dark transition-all duration-300 shadow-[0_0_10px_rgba(0,229,255,0.15)] hover:shadow-[0_0_15px_rgba(0,229,255,0.5)] cursor-pointer"
+            className="bg-primary/10 text-primary border border-primary px-3.5 py-1.5 md:px-5 md:py-2 text-xs md:text-sm whitespace-nowrap rounded-full font-semibold hover:bg-primary hover:text-dark transition-all duration-300 shadow-[0_0_10px_rgba(0,229,255,0.15)] hover:shadow-[0_0_15px_rgba(0,229,255,0.5)] cursor-pointer"
           >
             {isCvPage ? t('header.downloadCV') : t('header.viewCV')}
           </button>
         </div>
+
+        {/* BOTTONE BURGER (Mobile only) */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden flex flex-col justify-between w-6 h-4 z-55 relative cursor-pointer focus:outline-none"
+          aria-label="Menu"
+        >
+          <span className={`w-full h-[2px] bg-white rounded-full transition-all duration-300 transform ${isOpen ? 'rotate-45 translate-y-[7px]' : ''}`}></span>
+          <span className={`w-full h-[2px] bg-white rounded-full transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`}></span>
+          <span className={`w-full h-[2px] bg-white rounded-full transition-all duration-300 transform ${isOpen ? '-rotate-45 -translate-y-[7px]' : ''}`}></span>
+        </button>
       </header>
 
       {/* ======================================================== */}
-      {/* 4. FLOATING MOBILE NAV (Visibile SOLO su MOBILE in basso) */}
+      {/* 4. OVERLAY MENU BURGER RESPONSIVO (Slide-down glassmorphism) */}
       {/* ======================================================== */}
-      <nav className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#0b1120]/80 backdrop-blur-xl border border-gray-800/80 py-2.5 px-6 sm:py-3.5 sm:px-8 rounded-full flex items-center gap-6 sm:gap-10 z-50 shadow-[0_15px_35px_rgba(0,0,0,0.6)] shadow-black/80 max-w-[95vw] w-fit">
-        
-        {/* LINK HOME */}
-        <NavLink 
-          to="/" 
-          className={({isActive}) => 
-            `flex flex-col items-center justify-center transition-all duration-300 ${
-              isActive ? 'text-primary scale-110' : 'text-gray-400 hover:text-white'
-            }`
-          }
-          aria-label={t('sidebar.home')}
-        >
-          <svg className="w-5 h-5 sm:w-6 sm:h-6 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-          </svg>
-          <span className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider">{t('sidebar.home')}</span>
-        </NavLink>
-        
-        {/* LINK PROGETTI */}
-        <NavLink 
-          to="/projects" 
-          className={({isActive}) => 
-            `flex flex-col items-center justify-center transition-all duration-300 ${
-              isActive ? 'text-primary scale-110' : 'text-gray-400 hover:text-white'
-            }`
-          }
-          aria-label={t('sidebar.projects')}
-        >
-          <svg className="w-5 h-5 sm:w-6 sm:h-6 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
-          </svg>
-          <span className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider">{t('sidebar.projects')}</span>
-        </NavLink>
+      <div 
+        className={`fixed inset-0 bg-dark/98 backdrop-blur-3xl z-40 flex flex-col items-center justify-center gap-8 transition-all duration-500 ease-in-out md:hidden ${
+          isOpen ? 'translate-y-0 opacity-100 pointer-events-auto' : '-translate-y-full opacity-0 pointer-events-none'
+        }`}
+      >
+        {/* Link del Menu */}
+        <nav className="flex flex-col items-center gap-8">
+          <NavLink 
+            to="/" 
+            onClick={() => setIsOpen(false)}
+            className={({isActive}) => 
+              `text-2xl font-semibold tracking-wide transition-all duration-300 ${
+                isActive ? 'text-primary scale-110 drop-shadow-[0_0_8px_rgba(0,229,255,0.3)]' : 'text-gray-300 hover:text-white'
+              }`
+            }
+          >
+            {t('sidebar.home')}
+          </NavLink>
+          
+          <NavLink 
+            to="/projects" 
+            onClick={() => setIsOpen(false)}
+            className={({isActive}) => 
+              `text-2xl font-semibold tracking-wide transition-all duration-300 ${
+                isActive ? 'text-primary scale-110 drop-shadow-[0_0_8px_rgba(0,229,255,0.3)]' : 'text-gray-300 hover:text-white'
+              }`
+            }
+          >
+            {t('sidebar.projects')}
+          </NavLink>
 
-        {/* LINK CONTATTI */}
-        <NavLink 
-          to="/contact" 
-          className={({isActive}) => 
-            `flex flex-col items-center justify-center transition-all duration-300 ${
-              isActive ? 'text-primary scale-110' : 'text-gray-400 hover:text-white'
-            }`
-          }
-          aria-label={t('sidebar.contact')}
+          <NavLink 
+            to="/contact" 
+            onClick={() => setIsOpen(false)}
+            className={({isActive}) => 
+              `text-2xl font-semibold tracking-wide transition-all duration-300 ${
+                isActive ? 'text-primary scale-110 drop-shadow-[0_0_8px_rgba(0,229,255,0.3)]' : 'text-gray-300 hover:text-white'
+              }`
+            }
+          >
+            {t('sidebar.contact')}
+          </NavLink>
+        </nav>
+
+        {/* Separatore */}
+        <div className="w-2/3 h-[1px] bg-gray-800/80 my-2"></div>
+
+        {/* Selezione Lingua nel Menu Mobile */}
+        <div className="flex items-center gap-4 bg-white/5 border border-gray-800/80 p-2 px-4 rounded-full shadow-inner">
+          <button 
+            onClick={() => { i18n.changeLanguage('it'); setIsOpen(false); }}
+            className={`transition-all duration-300 cursor-pointer ${
+              i18n.language === 'it' ? 'scale-125 drop-shadow-[0_0_5px_rgba(255,255,255,0.4)]' : 'opacity-55 hover:opacity-100'
+            }`}
+            title="Italiano"
+          >
+            <img src="https://flagcdn.com/w40/it.png" alt="IT" className="w-7 h-5 object-cover rounded-[2px]" />
+          </button>
+          
+          <div className="w-[1px] h-4 bg-gray-700/80"></div>
+
+          <button 
+            onClick={() => { i18n.changeLanguage('en'); setIsOpen(false); }}
+            className={`transition-all duration-300 cursor-pointer ${
+              i18n.language === 'en' ? 'scale-125 drop-shadow-[0_0_5px_rgba(255,255,255,0.4)]' : 'opacity-55 hover:opacity-100'
+            }`}
+            title="English"
+          >
+            <img src="https://flagcdn.com/w40/gb.png" alt="EN" className="w-7 h-5 object-cover rounded-[2px]" />
+          </button>
+          
+          <div className="w-[1px] h-4 bg-gray-700/80"></div>
+
+          <button 
+            onClick={() => { i18n.changeLanguage('fr'); setIsOpen(false); }}
+            className={`transition-all duration-300 cursor-pointer ${
+              i18n.language === 'fr' ? 'scale-125 drop-shadow-[0_0_5px_rgba(255,255,255,0.4)]' : 'opacity-55 hover:opacity-100'
+            }`}
+            title="Français"
+          >
+            <img src="https://flagcdn.com/w40/fr.png" alt="FR" className="w-7 h-5 object-cover rounded-[2px]" />
+          </button>
+        </div>
+
+        {/* Pulsante CV nel Menu Mobile */}
+        <button 
+          onClick={handleCvClick}
+          className="bg-primary/10 text-primary border border-primary px-6 py-2.5 text-sm rounded-full font-semibold hover:bg-primary hover:text-dark transition-all duration-300 shadow-[0_0_15px_rgba(0,229,255,0.2)] hover:shadow-[0_0_20px_rgba(0,229,255,0.5)] cursor-pointer mt-2"
         >
-          <svg className="w-5 h-5 sm:w-6 sm:h-6 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-          </svg>
-          <span className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider">{t('sidebar.contact')}</span>
-        </NavLink>
-      </nav>
+          {isCvPage ? t('header.downloadCV') : t('header.viewCV')}
+        </button>
+      </div>
     </>
   );
 };
