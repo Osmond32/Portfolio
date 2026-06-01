@@ -49,8 +49,9 @@ const resources = {
       },
       about: {
         title_sm: "A proposito di me...",
-        title: "Dalla padella al Codice: La Mia Storia di Riconversione",
-        image_alt: "Cucinare Codice e Psicologia",
+        title: "Chi Sono",
+        paragraph: "Dopo aver conseguito un Bac+5 in Psicologia del Lavoro all'Università di Torino, ho deciso di viaggiare e scoprire il mondo, fino a stabilirmi in Francia. Qui ho svolto diversi lavori che hanno forgiato la mia disciplina e il mio spirito di adattamento. Recentemente ho conseguito un Bac+2 in Sviluppo Web, spinto dalla passione per l'informatica e lo sviluppo di soluzioni digitali. Oggi unisco le mie competenze trasversali — comunicazione, problem solving e gestione — alla padronanza di React, Node.js e MySQL per creare applicazioni web moderne e funzionali.",
+        image_alt: "Il mio percorso professionale",
         timeline: {
           edu_date: "2006 - 2012 • Università degli studi di Torino (Bac+5)",
           edu_title: "Psicologia del lavoro e delle organizzazioni",
@@ -181,8 +182,9 @@ const resources = {
       },
       about: {
         title_sm: "About me...",
-        title: "From the Pan to the Code: My Career Change Story",
-        image_alt: "Cooking Code and Psychology",
+        title: "About Me",
+        paragraph: "After earning a Master's degree (Bac+5) in Work and Organizational Psychology from the University of Turin, I decided to travel and explore the world, eventually settling in France. There I held various roles that forged my discipline and adaptability. I recently completed a Bac+2 in Web Development, driven by my passion for technology and building digital solutions. Today I combine my cross-functional skills — communication, problem solving and management — with expertise in React, Node.js and MySQL to build modern, functional web applications.",
+        image_alt: "My professional journey",
         timeline: {
           edu_date: "2006 - 2012 • University of Turin (Master's Degree)",
           edu_title: "Work and Organizational Psychology",
@@ -313,8 +315,9 @@ const resources = {
       },
       about: {
         title_sm: "À propos de moi...",
-        title: "De la poêle au Code : Mon histoire de reconversion",
-        image_alt: "Cuisiner le Code et la Psychologie",
+        title: "Qui suis-je",
+        paragraph: "Après avoir obtenu un Bac+5 en Psychologie du Travail à l'Université de Turin, j'ai décidé de voyager et découvrir le monde, avant de m'installer en France. J'y ai exercé différents métiers qui ont forgé ma discipline et mon esprit d'adaptation. J'ai récemment obtenu un Bac+2 en Développement Web, poussé par ma passion pour l'informatique et la création de solutions numériques. Aujourd'hui, je combine mes compétences transversales — communication, résolution de problèmes et gestion — avec la maîtrise de React, Node.js et MySQL pour créer des applications web modernes et fonctionnelles.",
+        image_alt: "Mon parcours professionnel",
         timeline: {
           edu_date: "2006 - 2012 • Université de Turin (Bac+5)",
           edu_title: "Psychologie du travail et des organisations",
