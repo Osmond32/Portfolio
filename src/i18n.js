@@ -125,6 +125,10 @@ const resources = {
           users: {
             title: "Gestione Users",
             description: "Sistema di autenticazione backend e frontend con registrazione, login sicuro, criptografia password (Bcrypt) e gestione dei token (JWT)."
+          },
+          mamathebest: {
+            title: "MamaTheBest",
+            description: "Un'applicazione pensata per la madre per monitorare l'alimentazione del bambino, tracciando orari, quantità e preferenze nutrizionali."
           }
         }
       },
@@ -258,6 +262,10 @@ const resources = {
           users: {
             title: "User Management",
             description: "Backend and frontend authentication system with registration, secure login, password encryption (Bcrypt), and token management (JWT)."
+          },
+          mamathebest: {
+            title: "MamaTheBest",
+            description: "An application designed for mothers to monitor their baby's feeding, tracking times, quantities, and nutritional preferences."
           }
         }
       },
@@ -391,6 +399,10 @@ const resources = {
           users: {
             title: "Gestion des Utilisateurs",
             description: "Système d'authentification backend et frontend avec inscription, connexion sécurisée, cryptage de mots de passe (Bcrypt) et gestion des jetons (JWT)."
+          },
+          mamathebest: {
+            title: "MamaTheBest",
+            description: "Une application conçue pour les mères pour surveiller l'alimentation de leur bébé, en enregistrant les horaires, les quantités et les préférences nutritionnelles."
           }
         }
       },

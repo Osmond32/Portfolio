@@ -17,7 +17,7 @@ const technologies = [
   { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
   { name: 'Vercel', icon: 'https://cdn.simpleicons.org/vercel/white' },
   { name: 'Render', icon: 'https://cdn.simpleicons.org/render/white' },
-  { name: 'Aiven', icon: 'https://cdn.simpleicons.org/aiven/white' },
+  { name: 'Aiven', icon: '/aiven.svg' },
  
   { name: 'Gemini', icon: 'https://cdn.simpleicons.org/googlegemini/8E75B2' },
   { name: 'Antigravity', icon: 'https://cdn.simpleicons.org/probot/00E5FF' }, // Il mio logo personalizzato per te!
