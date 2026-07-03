@@ -420,7 +420,7 @@ i18n
   .use(initReactI18next) // Passa i18n a react-i18next
   .init({
     resources,
-    lng: "it", // Lingua di default all'apertura del sito
+    lng: "fr", // Lingua di default all'apertura del sito
     fallbackLng: "en", // Se manca una traduzione, usa l'inglese
     interpolation: {
       escapeValue: false // React protegge già dagli attacchi XSS

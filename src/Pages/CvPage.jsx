@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-// Assicurati che il nome del file 'CV_Giuseppe_Saia.pdf' sia corretto e che si trovi nella cartella 'src/assets'
-import cvFile from '../assets/CV_Giuseppe_Saia.pdf';
+// Assicurati che il nome del file 'CV.pdf' sia corretto e che si trovi nella cartella 'src/assets'
+import cvFile from '../assets/CV.pdf';
 
 const CvPage = () => {
   const { t } = useTranslation();

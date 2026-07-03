@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useLocation, useNavigate, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import cvFile from '../assets/CV_Giuseppe_Saia.pdf';
+import cvFile from '../assets/CV.pdf';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

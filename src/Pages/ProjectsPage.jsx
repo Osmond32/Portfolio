@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import mamatheBestImg from '../assets/mamathebest.png';
 
 // Qui puoi inserire o modificare i dati dei tuoi veri progetti
 const projectsData = [
@@ -54,7 +55,7 @@ const projectsData = [
   },
   {
     id: "mamathebest",
-    image: "/projects/mamathebest.png",
+    image: mamatheBestImg,
     tech: ["React", "Tailwind CSS", "Node.js", "Express", "MySQL", "Clerk"],
     isComingSoon: true,
     inProduction: false
