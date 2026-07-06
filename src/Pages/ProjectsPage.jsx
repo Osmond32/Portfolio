@@ -57,8 +57,10 @@ const projectsData = [
     id: "mamathebest",
     image: mamatheBestImg,
     tech: ["React", "Tailwind CSS", "Node.js", "Express", "MySQL", "Clerk"],
-    isComingSoon: true,
-    inProduction: false
+    link: "https://mamathebest.vercel.app",
+    isComingSoon: false,
+    inProduction: false,
+    hasColdStart: true
   }
 ];
 
