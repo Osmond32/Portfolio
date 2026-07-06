@@ -35,11 +35,6 @@ const HomePage = () => {
             </span>
           </h1>
 
-          {/* 3. Tagline — senza animate-pulse */}
-          <p className="text-primary font-mono mb-8 text-lg md:text-xl font-semibold border-l-4 border-primary pl-4 animate-fadeInUp-d2">
-            {t('home.tagline')}
-          </p>
-
           {/* 4. Descrizione */}
           <p className="text-gray-400 max-w-lg text-lg leading-relaxed animate-fadeInUp-d2">
             {t('home.description')}

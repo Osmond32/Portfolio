@@ -14,8 +14,7 @@ const resources = {
         greeting: "Ciao sono",
         role_prefix: "Sviluppatore",
         role_suffix: "Web Full-Stack.",
-        tagline: "Ti aiuto a trasformare la tua presenza online in clienti reali",
-        description: "Sviluppo soluzioni su misura con React e Node.js: siti performanti, responsive e pensati per convertire visitatori in clienti.",
+        description: "Sviluppo soluzioni su misura con React, Node.js e MySQL: landing page, soluzioni full stack con database sicurizzati e SaaS.",
         availability: "Pronto a raggiungere la vostra equipe in alternance",
         cta_hero: "Parliamo del tuo progetto",
         languages: {
@@ -151,8 +150,7 @@ const resources = {
         greeting: "Hi, I'm",
         role_prefix: "Full-Stack",
         role_suffix: "Web Developer.",
-        tagline: "I help you transform your online presence into real customers",
-        description: "Developing tailor-made solutions with React and Node.js: high-performance, responsive sites designed to convert visitors into customers.",
+        description: "I develop custom solutions with React, Node.js, and MySQL: landing pages, full-stack solutions with secured databases, and SaaS.",
         availability: "Ready to join your team for a work-study program (alternance)",
         cta_hero: "Let's talk about your project",
         languages: {
@@ -288,8 +286,7 @@ const resources = {
         greeting: "Bonjour, je suis",
         role_prefix: "Développeur",
         role_suffix: "Web Full-Stack.",
-        tagline: "Je vous aide à transformer votre présence en ligne en clients réels",
-        description: "Je développe des solutions sur mesure avec React et Node.js : des sites performants, responsives et conçus pour convertir les visiteurs en clients.",
+        description: "Je développe des solutions sur mesure avec React, Node.js et MySQL : landing pages, solutions full-stack avec bases de données sécurisées et SaaS.",
         availability: "Prêt à rejoindre votre équipe en alternance",
         cta_hero: "Parlons de votre projet",
         languages: {
