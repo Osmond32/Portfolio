@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import ReactGA from 'react-ga4';
 import Navbar from './Components/Navbar';
@@ -8,6 +8,7 @@ import ProjectsPage from './Pages/ProjectsPage';
 import ContactPage from './Pages/ContactPage';
 import CvPage from './Pages/CvPage';
 import ScrollToTop from './Components/ScrollToTop';
+import Loader from './Components/Loader';
 
 // Importiamo la configurazione delle lingue!
 import './i18n';
@@ -33,8 +34,11 @@ function AnalyticsTracker() {
 }
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <HashRouter>
+      {isLoading && <Loader onComplete={() => setIsLoading(false)} />}
       <ScrollToTop />
       <AnalyticsTracker />
       {/* Sfondo principale dell'app */}

@@ -14,7 +14,7 @@ const resources = {
         greeting: "Ciao sono",
         role_prefix: "Sviluppatore",
         role_suffix: "Web Full-Stack.",
-        description: "Sviluppo soluzioni su misura con React, Node.js e MySQL: landing page, soluzioni full stack con database sicurizzati e SaaS.",
+        description: "Sviluppo soluzioni su misura con React, Node.js e MySQL: landing page, soluzioni full stack con database sicurizzati e SaaS. ",
         availability: "Pronto a raggiungere la vostra equipe in alternance",
         cta_hero: "Parliamo del tuo progetto",
         languages: {

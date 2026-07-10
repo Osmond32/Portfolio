@@ -4,6 +4,8 @@ import AboutSection from '../Components/AboutSection';
 import Skills from '../Components/Skills';
 import ProjectsOverview from '../Components/ProjectsOverview';
 import { useTranslation } from 'react-i18next';
+// Force redeploy - 2026-07-06
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const HomePage = () => {
