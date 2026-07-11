@@ -89,7 +89,7 @@ const resources = {
       projects_page: {
         title_sm: "I Miei Lavori",
         title: "Progetti in Evidenza",
-        description: "Ecco una selezione di progetti realizzati durante la mia formazione. Ogni card rappresenta una sfida affrontata, nuove tecnologie apprese e soluzioni implementate per trasformare idee in codice funzionante.",
+        description: "Esplora una selezione di applicazioni web e progetti digitali che ho progettato e sviluppato. Ogni lavoro unisce rigore logico, cura del design ed efficienza tecnica per tradurre requisiti complessi in soluzioni performanti e pronte all'uso.",
         view_project: "Vedi Progetto",
         coming_soon: "Presto disponibile",
         in_production: "In produzione",
@@ -225,7 +225,7 @@ const resources = {
       projects_page: {
         title_sm: "My Work",
         title: "Featured Projects",
-        description: "Here is a selection of projects carried out during my training. Each card represents a challenge faced, new technologies learned, and solutions implemented to turn ideas into functional code.",
+        description: "Explore a selection of web applications and digital projects I have designed and developed. Each project combines logical rigor, design care, and technical efficiency to translate complex requirements into high-performing, production-ready solutions.",
         view_project: "View Project",
         coming_soon: "Coming soon",
         in_production: "In production",
@@ -361,7 +361,7 @@ const resources = {
       projects_page: {
         title_sm: "Mes Travaux",
         title: "Projets en Vedette",
-        description: "Voici une sélection de projets réalisés lors de ma formation. Chaque carte représente un défi relevé, de nouvelles technologies apprises et des solutions mises en œuvre pour transformer des idées en code fonctionnel.",
+        description: "Découvrez une sélection d'applications web et de projets numériques que j'ai conçus et développés. Chaque réalisation associe rigueur logique, soin du design et efficacité technique pour traduire des exigences complexes en solutions performantes et prêtes à l'emploi.",
         view_project: "Voir le Projet",
         coming_soon: "Bientôt disponible",
         in_production: "In production",
